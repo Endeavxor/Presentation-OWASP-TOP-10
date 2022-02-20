@@ -21,7 +21,7 @@ In order to raise awareness about the vulnerabilities included by developers in 
 ```bash
 git clone https://github.com/Endeavxor/Presentation-OWASP-TOP-10.git
 cd "Presentation-OWASP-TOP-10"
-docker-compose up .
+docker-compose up
 ```
 
 ## Connecting :
