@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Twouitter</title>
+</head>
+<body>
+    <div id="cointainer" class="marg">
+        <div id="left-pannel">
+            <img class="logo" src="twouitter.png">
+
+            <nav class="menu">
+                <ol>
+                    <li><a href="/"><img src="home-solid.svg">Home</a></li>
+                    <li><a href="/messages"><img src="comment-solid.svg">Messages</a></li>
+                    <li><a href="/account?userID={{session['id']}}"><img src="comment-solid.svg">Account</a></li>
+                    <li><a href="/profil"><img src="user-solid.svg">Profil</a></li>
+                </ol>
+            </nav>
+        </div>
+        <div id="main-pannel">
+            <div class="account_infos">
+                <div class="container-author">
+                    <img class="author-logo" src="{{session['username']|lower}}.jpg">
+                    <p class="author-name">{{session['username']}}</p>
+                </div>
+                <div>
+                    <p>UserID : {{userInfo[0]}} </p>
+                    <p>Email : {{userInfo[2]}}</p>
+                    <p>Password : {{userInfo[3]}}</p>
+                </div> 
+            </div>
+        </div>
+
+        <div id="left-pannel">
+
+        </div>
+
+
+    </div>
+</body>
+</html>

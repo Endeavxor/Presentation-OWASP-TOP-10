@@ -1,0 +1,27 @@
+services:
+    db:
+        build: ./twouitter_database
+        container_name: twouitter_database
+        networks: 
+          - twouitter_network
+
+        environment:
+          MARIADB_USER: example-user
+          MARIADB_PASSWORD: my_cool_secret
+          MARIADB_ROOT_PASSWORD: my-secret-pw
+          MYSQL_DATABASE: twouitter
+
+    web:
+        build: ./twouitter_web
+        container_name: twouitter_web
+        ports: 
+          - "5000:5000"
+        networks: 
+          - twouitter_network
+        depends_on:
+          - "db"
+
+
+networks:
+    twouitter_network:
+        driver: bridge

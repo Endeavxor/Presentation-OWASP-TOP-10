@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Twouitter</title>
+</head>
+<body>
+    <div id="cointainer" class="marg">
+        <div id="left-pannel">
+            <img class="logo" src="twouitter.png">
+
+            <nav class="menu">
+                <ol>
+                    <li><a href="/"><img src="home-solid.svg">Home</a></li>
+                    <li><a href="/messages"><img src="comment-solid.svg">Messages</a></li>
+                    <li><a href="/account?userID={{session['id']}}"><img src="comment-solid.svg">Account</a></li>
+                    <li><a href="/profil"><img src="user-solid.svg">Profil</a></li>
+                </ol>
+            </nav>
+        </div>
+        <div id="main-pannel">
+            <div id="twitterForm">
+                <form action="" method="POST" class="form-example" id="form1">
+                    <textarea id="tweet" name="tweetContent" placeholder="What's happening?"></textarea>
+                  </form>
+                  <button type="submit" form="form1" value="Submit">Twoouit</button>
+
+            </div>
+
+            {% for tweet in tweets|reverse %}
+            <div class="message">
+                <div class="author">
+                    <div class="container-author">
+                        <img class="author-logo" src="{{tweet[5]|lower}}.jpg">
+                        <p class="author-name">@{{tweet[5]}}</p>
+                    </div>                        
+                    <img class="message-logo" src="twouitter.png">
+                </div>
+                <p class="content-tweet">{{tweet[1]|safe}}</p>
+                <time datetime="2018-07-07">{{ tweet[2].strftime('%d-%m-%Y %H:%M:%S') }}</time>
+                <hr>
+                <div class="social-tweet">
+                    <a href="#"><img src="comments-solid.svg" class="icons"></a>
+                    <a href="#"><img src="retweet-solid.svg" class="icons"></a>
+                    <a href="#"><img src="heart-solid.svg" class="icons"></a>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+        <div id="left-pannel">
+
+        </div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+body{
+    background-color: #1c1e29;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+#cointainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.marg{
+    margin-top: 15px;
+
+}
+#left-pannel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 60px;
+}
+
+#main-pannel,#profil-pannel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+}
+#profil-pannel{
+    margin-bottom: 20px;
+}
+.message{
+    background-color: #33354b;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+}
+#twitterForm{
+    width: 100%;
+    border-radius: 10px;
+    background-color: #33354b;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+#twitterForm button{
+    background-color: #1DA1F2;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    border: 0;
+}
+textarea{
+    color: white;
+    background-color: #33354b;
+    border: 0;
+    resize: none;
+    width: 100%;
+    height: 100px;
+    overflow: auto;
+    outline: none;
+
+}
+
+.content-tweet{
+    text-align: justify;
+}
+.container-author{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.container-author .author-logo{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.author{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.author-name{
+    margin-left: 10px;
+}
+.message-logo{
+    width: 35px;
+
+}
+.logo{
+    width: 30px;
+}
+
+.message-logo{
+    margin-bottom: 15px;
+}
+.content-tweet{
+    margin: 5px 0  15px 0 ;
+}
+
+time{
+    font-size: 11px;
+    color: grey;
+}
+
+hr{
+    margin: 15px -20px 10px;
+    border: 0;
+    border-top: 1px solid #c9c7c7;
+}
+
+.social-tweet{
+    display: flex;
+    justify-content: space-around;
+}
+.social-tweet a img{
+    height: 15px;
+    color:white;
+    filter: invert(100%) sepia(0%) saturate(7443%) hue-rotate(49deg) brightness(112%) contrast(110%);
+}
+
+.menu ol li{
+    list-style-type: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 0;
+    border-radius: 20px;
+    width: 100%;
+
+}
+.menu ol li:hover{
+    background-color: #33354b;
+
+}
+.menu ol li a{
+    text-decoration: none;
+    color: white;
+
+}
+
+
+nav ol li a img,#position img,#website-link img{
+    height: 20px;
+    filter: invert(100%) sepia(0%) saturate(7443%) hue-rotate(49deg) brightness(112%) contrast(110%);
+    vertical-align: middle; 
+    margin-right: 10px;
+    padding-bottom: 3px;
+
+}
+
+/* PROFIL */
+
+#banner{
+    /*background-color: red;*/
+    width: 100%;
+    height: 200px;
+    background-image: url('banner.png');
+    background-position: 13% 98%;
+    padding-left: 20px;
+    padding-right: 20px;    
+}
+
+#profil-links{
+    display:flex;
+}
+
+#profil-picture{
+    position: relative;
+    top: -75px;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    margin-left: 15px;
+    background-color: #1DA1F2;
+    border-radius: 50%;
+    margin-bottom: -50px;
+    /*background-image: url('endeavxor.jpg');
+    background-position: 13% 98%;
+    background-size: contain;*/
+
+}
+#profil-desc p{
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#profil-desc{
+    background-color: #33354b;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;    
+}
+#surname,.boldspan{
+    font-weight: bold;
+}
+#follows-infos{
+    display: flex;
+}
+#description{
+    text-align: justify;
+}
+#username,#description,#profil-links,#follows-infos{
+    margin-bottom: 15px !important;
+}
+
+
+.account_infos{
+    background-color: #33354b;
+    border-radius: 10px;
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly ;
+    align-items: center;
+}
+
+.message-section{
+    background-color: #33354b;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.message-containers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.changePicture{
+    margin-left: 15px;
+    background-color: #1DA1F2;
+    border-radius: 50%;    
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.message-containers p{
+    margin-left: 10px;
+}
+
+.message-containers p a{
+    color: cyan;
+}
+

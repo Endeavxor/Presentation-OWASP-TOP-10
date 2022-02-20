@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Twouitter</title>
+</head>
+<body>
+    <div id="cointainer">
+        <div id="left-pannel">
+            <img class="logo" src="twouitter.png">
+
+            <nav class="menu">
+                <ol>
+                    <li><a href="/"><img src="home-solid.svg">Home</a></li>
+                    <li><a href="/messages"><img src="comment-solid.svg">Messages</a></li>
+                    <li><a href="/account?userID={{session['id']}}"><img src="comment-solid.svg">Account</a></li>
+                    <li><a href="/profil"><img src="user-solid.svg">Profil</a></li>
+                </ol>
+            </nav>
+        </div>
+        <div id="profil-pannel">
+            <div id="banner"></div>
+            <div id="profil-desc">
+                <img id="profil-picture" src="{{session['username']|lower}}.jpg">
+                <p id="surname">{{session['username']}}</p>
+                <p id="username">@{{session['username']}}</p>
+                <p id="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et eius blanditiis quis quam? Quibusdam ad dolores iure, officia maiores, quas quos doloribus, illo nam magnam commodi obcaecati porro atque in!
+                Et ratione maiores magnam, amet qui, culpa dolorum molestiae quaerat possimus fugiat minima autem, quis dolor nulla. Nam nihil at pariatur sunt ipsa expedita odit officiis tenetur magnam enim. Exercitationem?</p>
+                <div id="profil-links">
+                    <p id="position"><img src="map-marker-alt-solid.svg">Vannes</p>
+                    <p id="website-link"><img src="link-solid.svg">https://twouitter.com/{{session['username']}}</p>
+                </div>
+                <div id="follows-infos">
+                    <p><span class="boldspan">1337 </span>Following</p>
+                    <p><span class="boldspan">1337 </span>Followers</p>
+                </div>
+            </div>
+            {% for tweet in tweets|reverse %}
+            <div class="message">
+                <div class="author">
+                    <div class="container-author">
+                        <img class="author-logo" src="{{tweet[5]|lower}}.jpg">
+                        <p class="author-name">@{{tweet[5]}}</p>
+                    </div>                        
+                    <img class="message-logo" src="twouitter.png">
+                </div>
+                <p class="content-tweet">{{tweet[1]|safe}}</p>
+                <time datetime="2018-07-07">{{ tweet[2].strftime('%d-%m-%Y %H:%M:%S') }}</time>
+                <hr>
+                <div class="social-tweet">
+                    <a href="#"><img src="comments-solid.svg" class="icons"></a>
+                    <a href="#"><img src="retweet-solid.svg" class="icons"></a>
+                    <a href="#"><img src="heart-solid.svg" class="icons"></a>
+                </div>
+            </div>
+            {% endfor %}
+
+
+        </div>
+
+        <div id="left-pannel">
+
+        </div>
+
+    </div>
+</body>
+</html>
